@@ -1,4 +1,4 @@
-# cuda_c (I\ipynb)
+# cuda_c (ipynb)
 ## 2D Diffusion Simulation
 
 This is a CUDA program that performs 2D diffusion on a grid of size `NX` x `NY` using the finite difference method. The program reads the initial grid values from a file and then performs a series of iterations to simulate the diffusion process.
@@ -8,7 +8,7 @@ This is a CUDA program that performs 2D diffusion on a grid of size `NX` x `NY` 
 To compile the code, you will need to have a CUDA-compatible GPU and a CUDA compiler installed on your system. You can then use the `nvcc` compiler to compile the code by running the following command:
 
 ```bash
-nvcc main.cu func.cu -o main
+nvcc main.cu diffusion2d.cu etc.cu bmp.cu -o main
 ```
 
 This will compile the `main.cu` and `func.cu` files and create an executable file named `main`.
@@ -38,12 +38,18 @@ You can also modify the initial grid values by modifying the `initial` function.
 
 The program generates image files representing the state of the grid at regular intervals. The files are in BMP format and are named `f000.bmp`, `f001.bmp`, and so on. You can view these files using an image viewer or convert them to a different format using an image conversion tool.
 
-The program also outputs the current time at regular intervals. The time is output to `stderr` and is expressed in units of the grid spacing squared divided by the diffusion coefficient. The time is also displayed in the output image files.
+The program also outputs the current time at regular intervals. The time is output to `stderr` and is expressed in units of the grid spacing squared divided by the diffusion coefficient. 
 
 ### Additional files
 
 The program includes the following additional files:
 
 - `func.h`: This file contains function prototypes and global variable declarations.
-- `func.cu`: This file contains the implementation of the `diffusion_2d` and `generate_bmp_image` functions.
-- `Makefile`: This file contains instructions for compiling the code using the `make` utility.
+- `diffusion.cu`: This file contains the implementation of the `diffusion_2d` function.
+- `etc.cu`:This file contains several utility functions that are used by the main program.
+- `bmp.cu`: This file contains the implementation of the `generate_bmp_image` function.
+
+
+
+"The code in this project was developed based on the concepts and techniques described in the book 'はじめてのCUDAプログラミング' by 青木 尊之
+ (2009)."
