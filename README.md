@@ -44,7 +44,7 @@ The program also outputs the current time at regular intervals. The time is outp
 
 The program includes the following additional files:
 
-- `func.h`: This file contains function prototypes and global variable declarations.
+- `main.cu`: This file is a mian file that simulates the diffusion of a 2D grid using the finite difference method.
 - `diffusion.cu`: This file contains the implementation of the `diffusion_2d` function.
 - `etc.cu`:This file contains several utility functions that are used by the main program.
 - `bmp.cu`: This file contains the implementation of the `generate_bmp_image` function.
