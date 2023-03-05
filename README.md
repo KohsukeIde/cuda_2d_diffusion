@@ -1,4 +1,4 @@
-# cuda_c_2d_diffusion (ipynb)
+# cuda_2d_diffusion (ipynb)
 ## 2D Diffusion Simulation
 
 This is a CUDA program that performs 2D diffusion on a grid of size `NX` x `NY` using the finite difference method. The program reads the initial grid values from a file and then performs a series of iterations to simulate the diffusion process.
